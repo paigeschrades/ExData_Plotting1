@@ -22,7 +22,8 @@ prepped$Day <- wday(as.Date(prepped$Date, "%d/%m/%Y"), label=TRUE)
 
 
 ## PLOT 2 : Global Active Power (y-axis), x-axis: Day
-png(filename = "plot2.png")
+png(filename = "plot2.png", width = 480, height = 480,
+    units = "px")
 plot(prepped$Global_active_power, ylab="Global Active Power (kilowatts)", xlab="", xaxt="n", type="l")
 axis(side=1, at=c(0,1440,2880), labels=c("Thu","Fri","Sat"))
 dev.off()

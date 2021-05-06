@@ -21,6 +21,7 @@ prepped$Sub_metering_2 <- as.numeric(prepped$Sub_metering_2)
 prepped$Day <- wday(as.Date(prepped$Date, "%d/%m/%Y"), label=TRUE)
 
 ## PLOT 1 : histogram of Global Active Power (in red)
-png(filename="plot1.png")
+png(filename="plot1.png", width = 480, height = 480,
+    units = "px")
 hist(prepped$Global_active_power, col="red", main="Global Active Power", dexlab="Global Active Power (kilowatts)")
 dev.off()

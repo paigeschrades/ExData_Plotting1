@@ -21,7 +21,8 @@ prepped$Sub_metering_2 <- as.numeric(prepped$Sub_metering_2)
 prepped$Day <- wday(as.Date(prepped$Date, "%d/%m/%Y"), label=TRUE)
 
 ## PLOT 3 : Energy Sub Metering
-png(filename = "plot3.png")
+png(filename = "plot3.png", width = 480, height = 480,
+    units = "px")
 plot(prepped$Sub_metering_1, ylab="Energy sub metering", xlab="", xaxt="n", type="l")
 lines(prepped$Sub_metering_2, type="l", col="red")
 lines(prepped$Sub_metering_3, type="l", col="blue")

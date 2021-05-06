@@ -21,7 +21,8 @@ prepped$Sub_metering_2 <- as.numeric(prepped$Sub_metering_2)
 prepped$Day <- wday(as.Date(prepped$Date, "%d/%m/%Y"), label=TRUE)
 
 ## PLOT 4.png : 2x2 of plots (2,3 in col 1)
-png(filename = "plot4.png")
+png(filename = "plot4.png", width = 480, height = 480,
+    units = "px")
 par(mfcol=c(2,2))
 
 ##Plot 4a:
